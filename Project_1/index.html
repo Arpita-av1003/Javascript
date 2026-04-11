@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .pink {
+        background-color: pink;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      body {
+        text-align: center;
+      }
+      button {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        height: 100px;
+        width: 100px;
+      }
+      p {
+        font-size: 20px;
+      }
+     ul{
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+     }
+     li a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        color: white;
+        padding: 14px 16px;
+        
+     }
+     a:hover{
+        background-color: grey;
+     }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://www.youtube.com/">YouTube</a></li>
+      </ul>
+    </nav>
+    <div class="main">
+      <h1>Click to change the color:</h1>
+      <button class="pink" type="button">Pink</button>
+      <button class="red" type="button">Pink</button>
+      <button class="green" type="button">Pink</button>
+      <button class="blue" type="button">Pink</button>
+      <p>
+        Try clicking on one of the colors above to change the background color
+        of this page!
+      </p>
+    </div>
+
+    <script>
+const buttons = document.querySelectorAll("button");
+const body = document.querySelector("body");
+
+buttons.forEach((button) => {
+    button.addEventListener('click', function(e) {
+        if (e.target.tagName === 'BUTTON') {
+            body.style.backgroundColor = e.target.className;
+        }
+    });
+});
+
+    </script>
+  </body>
+</html>
