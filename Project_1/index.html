@@ -36,24 +36,23 @@
       p {
         font-size: 20px;
       }
-     ul{
+      ul {
         display: flex;
         list-style-type: none;
         margin: 0;
         padding: 0;
         background-color: black;
-     }
-     li a{
+      }
+      li a {
         text-decoration: none;
         display: block;
         text-align: center;
         color: white;
         padding: 14px 16px;
-        
-     }
-     a:hover{
+      }
+      a:hover {
         background-color: grey;
-     }
+      }
     </style>
   </head>
   <body>
@@ -76,17 +75,16 @@
     </div>
 
     <script>
-const buttons = document.querySelectorAll("button");
-const body = document.querySelector("body");
+      const buttons = document.querySelectorAll("button");
+      const body = document.querySelector("body");
 
-buttons.forEach((button) => {
-    button.addEventListener('click', function(e) {
-        if (e.target.tagName === 'BUTTON') {
+      buttons.forEach((button) => {
+        button.addEventListener("click", function (e) {
+          if (e.target.tagName === "BUTTON") {
             body.style.backgroundColor = e.target.className;
-        }
-    });
-});
-
+          }
+        });
+      });
     </script>
   </body>
 </html>

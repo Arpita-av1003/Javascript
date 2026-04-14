@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" src="https://images.unsplash.com/photo-1773332585698-cba3c91b73e4?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="Photoshop" alt="" ></li>
+            <li><img width="200px" src="https://images.unsplash.com/photo-1774579892278-e305439f05dd?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Photoshop" id="image2"></li>
+            <li><img width="200px" src="https://images.unsplash.com/photo-1773332598501-f8612761781a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" id="image3"></li>
+            <li><img width="200px" src="https://images.unsplash.com/photo-1774801890444-f1d9bbffe3ce?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" id="image4"></li>
+            <li><img width="200px" src="https://images.unsplash.com/photo-1761839271800-f44070ff0eb9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" id="image5"></li>
+             <li><a style="color: aliceblue;" href="www.google.com">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+
+<script>
+    // document.getElementById("image2").addEventListener("click",(e)=>{
+       
+    //     console.log("clicked on image2");
+    //     // e.stopPropagation()
+        
+    // },true)
+    // document.getElementById("images").addEventListener("click",(e)=>{
+        
+    //     console.log("clicked inside ul");
+        
+    // },true)
+
+
+    // document.getElementById('images').addEventListener('click',(e)=>{
+    //     console.log(e.target.parentNode);
+    //     let removeIT=e.target.parentNode;
+    //     removeIT.remove()
+    // },false);
+
+
+    document.querySelector("#images").addEventListener('click',(e)=>{
+        console.log(e.target.tagName);
+        
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        }
+    })
+</script>
+</html>
